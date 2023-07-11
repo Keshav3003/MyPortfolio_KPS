@@ -9,10 +9,11 @@
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
 }
-
 :root {
     --bg-color: #2a2a2a;
     --second-bg-color: #202020;
+    --p-bg-color:#2a2a2a;
+    --menu-color: #202020;
     --text-color: #fff;
     --second-color: #ccc;
     --main-color: #c181d5;
@@ -20,6 +21,43 @@
     --h2-font: 3rem;
     --p-font: 1.1rem;
 }
+
+/* Dark Mode Files */
+label{
+    position: absolute;
+    width: 45px;
+    height: 22px;
+    right: 20px;
+    top: 20px;
+    border: 2px solid;
+    border-radius: 20px;
+}
+label:before{
+    position: absolute;
+    content: '';
+    width:16px;
+    height: 16px;
+    left: 1px;
+    top: 1px;
+    border-radius: 50%;
+    background: #f1ebeb;
+    cursor: pointer;
+    transition: 0.4s;
+}
+label.active:before{
+    left: 24px;
+    background: #121111;
+}
+body.night{
+    --bg-color: #edeef3;
+    --second-bg-color: #f8f7f7;
+    --p-bg-color:#8575ce;
+    --menu-color: var(--main-color);
+    --text-color: #050505;
+    --second-color: #0d0c0c;
+    --main-color: #9a9adf;
+}
+
 
 body {
     background: var(--bg-color);
@@ -36,10 +74,11 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    padding: 22px 15%;
-    border-bottom: 1px solid transparent;
+    background: var(--menu-color);
+    padding: 15px 15%;
+    border-bottom: 3px solid #927070;
     transition: all .45s ease;
+    border-radius: 0% 0% 20% 20%;
 }
 /*
 .logo {
@@ -67,7 +106,7 @@ span {
 
 
 .navlist a:hover {
-    color: var(--main-color);
+    color: rgb(131, 131, 230)
 }
 
 #menu-icon {
@@ -87,24 +126,24 @@ section {
     position: relative;
     height: 100vh;
     width: 100%;
-   /*background-image: url(/img/background.jpg); */
    padding: 160px 60px 120px 100px;
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    background-color: var(--second-bg-color);
 }
-
+/*
 .HomeImage{
     max-width: 530px;
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
+    height: 350px;
+    width: auto;
+    border-radius: 5%;
     padding: 5px;
     background-image: linear-gradient(45deg,var(--main-color), #2e8cd4);
 }
-
+*/
 .slide {
     margin-bottom: 20px;
 }
@@ -179,6 +218,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 1.5rem;
+    background-color: var(--second-bg-color);
 }
 
 .about-img img {
@@ -246,7 +286,7 @@ svg{
 }
 
 .box {
-    background: var(--bg-color);
+    background: var(--p-bg-color);
     padding: 35px 30px;
     border-radius: 18px;
     margin-top: 0%;
@@ -380,3 +420,86 @@ svg{
     cursor: pointer;
 }
 
+@media (max-width: 1480px) {
+    header {
+        padding: 12px 2.5%;
+        transition: .1s;
+    }
+
+    section {
+        padding: 70px 15% 120px;
+    }
+
+    .Profiles{
+       padding: 70px 40px;
+    }
+}
+
+@media (max-width: 1100px){
+    :root{
+        --big-font:4rem;
+        --h2-font:2.5rem;
+        --p-font:1rem;
+        transition: .1s;
+    }
+    .home-text h3{
+        font-size: 2.5rem;
+    }
+    .home{
+        height: 87vh;
+    }
+}
+
+@media (max-width:920){
+    .about{
+        grid-template-columns: 1fr;
+    }
+    .HomeImage{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .about-img img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .contact{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px){
+    #menu-icon{
+        display: block;
+    }
+    .navlist{
+        position: absolute;
+        top: -1000px;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        text-align: left;
+        transition: all .45s ease;
+
+    }
+    .navlist a{
+        display: block;
+        margin: 17px;
+        font-size: 20px;
+        transition: all .45s ease;
+        color: var(--text-color);
+
+    }
+    .navlist a:hover{
+        color: var(--main-color);
+    }
+    navlist a.active{
+        color: var(--text-color);
+    }
+    .navlist.open{
+        top: 100%;
+    }
+}
