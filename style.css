@@ -22,30 +22,30 @@
     --p-font: 1.1rem;
 }
 
-/* Dark Mode Files */
+/* Dark Mode Toggle*/
 label{
     position: absolute;
-    width: 45px;
-    height: 22px;
-    right: 20px;
-    top: 20px;
-    border: 2px solid;
-    border-radius: 20px;
+    width: 7.91vh;
+    height: 3.87vh;
+    right: 3.515vh;
+    top: 1.915vh;
+    border: 0.352vh solid;
+    border-radius: 3.515vh;
 }
 label:before{
     position: absolute;
     content: '';
-    width:16px;
-    height: 16px;
-    left: 1px;
-    top: 1px;
+    width:2.81vh;
+    height: 2.81vh;
+    left: 0.175vh;
+    top: 0.175vh;
     border-radius: 50%;
     background: #f1ebeb;
     cursor: pointer;
     transition: 0.4s;
 }
 label.active:before{
-    left: 24px;
+    left: 4.22vh;
     background: #121111;
 }
 body.night{
@@ -75,19 +75,12 @@ header {
     align-items: center;
     justify-content: center;
     background: var(--menu-color);
-    padding: 15px 15%;
-    border-bottom: 3px solid #927070;
+    padding: 2.64vh 15%;
+    border-bottom: 0.53vh solid #927070;
     transition: all .45s ease;
     border-radius: 0% 0% 20% 20%;
 }
-/*
-.logo {
-    color: var(--text-color);
-    font-size: 35px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-*/
+
 span {
     color: var(--main-color);
 }
@@ -98,35 +91,22 @@ span {
 
 .navlist a {
     color: var(--second-color);
-    font-size: 17px;
+    font-size: 2.89vh;
     font-weight: 500;
-    margin: 0 25px;
+    margin: 0 4.394vh;
     transition: all .45s ease;
 }
 
-
-.navlist a:hover {
-    color: rgb(131, 131, 230)
-}
-
-#menu-icon {
-    font-size: 35px;
-    color: var(--text-color);
-    z-index: 1000;
-    cursor: pointer;
-    margin-left: 25px;
-    display: none;
-}
-
 section {
-    padding: 70px 15% 120px;
+    padding: 12.31vh 15% 21.09vh;
 }
 
+/*  HomePage */
 .home {
     position: relative;
     height: 100vh;
     width: 100%;
-   padding: 160px 60px 120px 100px;
+   padding: 28.12vh 10.545vh 21.09vh 17.545vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -134,28 +114,19 @@ section {
     justify-content: flex-start;
     background-color: var(--second-bg-color);
 }
-/*
-.HomeImage{
-    max-width: 530px;
-    height: 350px;
-    width: auto;
-    border-radius: 5%;
-    padding: 5px;
-    background-image: linear-gradient(45deg,var(--main-color), #2e8cd4);
-}
-*/
-.slide {
-    margin-bottom: 20px;
+
+.slide {    
+    margin-bottom: 3.515vh;
 }
 
 .one {
     display: inline-block;
-    margin-right: 15px;
-    padding: 0 15px;
-    line-height: 32px;
-    font-size: 20px;
+    margin-right: 2.64vh;
+    padding: 0 2.64vh;
+    line-height: 5.624vh;
+    font-size: 3.52vh;
     font-weight: 500;
-    border-radius: 5px;
+    border-radius: 0.88vh;
     background: var(--main-color);
     color: var(--text-color);
 }
@@ -163,7 +134,7 @@ section {
 .two {
     display: inline-block;
     color: var(--second-color);
-    font-size: 20px;
+    font-size: 3.52vh;
     font-weight: 500;
 }
 
@@ -172,13 +143,13 @@ section {
     font-weight: 700;
     color: var(--text-color);
     line-height: 1.1;
-    margin: 0 0 8px;
+    margin: 0 0 1.406vh ;
 
 }
 
 .home-text h3 {
     color: var(--text-color);
-    margin: 0 0 35px;
+    margin: 0 0 6.152vh;
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.1;
@@ -188,7 +159,7 @@ section {
     color: var(--second-color);
     font-size: var(--p-font);
     line-height: 1.8;
-    margin-bottom: 40px;
+    margin-bottom: 7.03vh;
 }
 
 .button {
@@ -212,7 +183,7 @@ section {
     transform: scale(0.9);
 }
 
-
+/*  About Section */
 .about {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -271,6 +242,8 @@ svg{
     line-height: 1;
 }
 
+/*  Profiles Section */
+
 .Profiles {
     background: var(--second-bg-color);
     padding: 80px 40px;
@@ -317,7 +290,7 @@ svg{
     cursor: pointer;
 }
 
-
+/* Contact Section */
 .contact {
     background: var(--second-bg-color);
     display: grid;
@@ -420,6 +393,8 @@ svg{
     cursor: pointer;
 }
 
+/*Media Queries*/
+
 @media (max-width: 1480px) {
     header {
         padding: 12px 2.5%;
@@ -450,7 +425,7 @@ svg{
     }
 }
 
-@media (max-width:920){
+@media (max-width:920px){
     .about{
         grid-template-columns: 1fr;
     }
@@ -468,38 +443,366 @@ svg{
         grid-template-columns: 1fr;
     }
 }
+.bx-menu{
+    visibility: hidden;
+}
 
-@media (max-width: 480px){
-    #menu-icon{
-        display: block;
+@media (min-width:200px) and (max-width:320px)
+{
+    .one{
+        font-size:1rem;
     }
-    .navlist{
-        position: absolute;
-        top: -1000px;
-        right: 0;
-        left: 0;
-        display: flex;
+    .two{
+        font-size: 1rem;
+    }
+    .home-text h1{
+        font-size:2rem;
+    }
+   .home-text h3{
+    font-size:0.75rem;
+   }
+   .home-text p{
+    font-size: small;
+   }
+   .contact-icons i{
+    display: inline;
+    height: fit-content;
+    width: fit-content;
+   }
+   
+   .Profiles{
+    padding-top: 11%;
+   }
+   .contact{
+    padding-top: 11%;
+   }
+
+    .bx-menu{
+        visibility: visible;
+        position: fixed;
+        top: 0vh;
+        right: 2vh;
+        display:block;
+        color: var(--text-color);
+        margin:20px;
+    }
+    
+    .Toggling.active{
+        left:0%;
+    }
+
+    .Toggling ul{
         flex-direction: column;
-        background: var(--bg-color);
-        text-align: left;
-        transition: all .45s ease;
+        width: 100%;
+        height: 100%;
+        background-color: var(--menu-color);
+        margin-top: 0%;
+        top:10%;
+        align-items: center;
+        border-bottom: 0.53vh solid #927070;
+        border-radius: 0% 0% 20% 20%;
+    } 
 
+    .Toggling{
+        border: 0px;
+        background-color: #927070;
+        padding: 0%;
+        left:-100%;
     }
-    .navlist a{
-        display: block;
-        margin: 17px;
-        font-size: 20px;
-        transition: all .45s ease;
-        color: var(--text-color);
+   
+   
+    .about-img img{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 50%;
+        margin-top: -15%;
+    }
+   
+    label {
+        position: absolute;
+        width: 1.91vh;
+        height: 5.56vh;
+        left:2vh;
+        
+        top: 4.25vh;
+        border: 0.352vh solid;
+        border-radius: 3.515vh;
+    }
 
+    label:before{
+        position: absolute;
+        content: '';
+        width:1.0vh;
+        height: 1.0vh;
+        left: 0.175vh;
+        top: 0.175vh;
+        border-radius: 50%;
+        background: #f1ebeb;
+        cursor: pointer;
+        transition: 0.4s;
     }
-    .navlist a:hover{
-        color: var(--main-color);
+    label.active:before{
+        left: 0.22vh;
+        top:3.3vh;
+        background: #121111;
+    }    
+   
+}
+
+@media (min-width:320px) and (max-width:388px)
+{
+    .one{
+        font-size:1rem;
     }
-    navlist a.active{
+    .two{
+        font-size: 1rem;
+    }
+    .home-text h1{
+        font-size:2rem;
+    }
+   .home-text h3{
+    font-size:0.75rem;
+   }
+   .home-text p{
+    font-size: small;
+   }
+   .contact-icons i{
+    display: inline;
+    height: fit-content;
+    width: fit-content;
+   }
+   .contact{
+    gap:0.5rem;
+}
+   /*
+   :root{
+    --big-font: 2rem;
+    --h2-font: 1rem;
+    --p-font: 0.75rem;
+   } */
+    .bx-menu{
+        visibility: visible;
+        position: fixed;
+        top: 0vh;
+        right: 4vh;
+        display:block;
         color: var(--text-color);
+        margin:20px;
     }
-    .navlist.open{
-        top: 100%;
+    
+    .Toggling.active{
+        left:0%;
     }
+
+    .Toggling ul{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: var(--menu-color);
+        margin-top: 0%;
+        top:10%;
+        align-items: center;
+        border-bottom: 0.53vh solid #927070;
+        border-radius: 0% 0% 20% 20%;
+    } 
+
+    .Toggling{
+        border: 0px;
+        background-color: #927070;
+        padding: 0%;
+        left:-100%;
+    }
+   
+   
+    .about-img img{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 50%;
+        margin-top: -15%;
+    }
+   
+    label {
+        position: absolute;
+        width: 1.91vh;
+        height: 5.56vh;
+        left:2vh;
+        
+        top: 4.25vh;
+        border: 0.352vh solid;
+        border-radius: 3.515vh;
+    }
+
+    label:before{
+        position: absolute;
+        content: '';
+        width:1.0vh;
+        height: 1.0vh;
+        left: 0.175vh;
+        top: 0.175vh;
+        border-radius: 50%;
+        background: #f1ebeb;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    label.active:before{
+        left: 0.22vh;
+        top:3.3vh;
+        background: #121111;
+    }    
+   
+}
+
+@media (min-width:388px) and (max-width: 535px)
+{
+        .bx-menu{
+            visibility: visible;
+            position: fixed;
+            top: 0vh;
+            right: 5vh;
+            display:block;
+            color: var(--text-color);
+            margin:20px;
+        }
+        
+        .Toggling.active{
+            left:0%;
+        }
+
+        .Toggling ul{
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            background-color: var(--menu-color);
+            margin-top: 0%;
+            top:10%;
+            align-items: center;
+            border-bottom: 0.53vh solid #927070;
+            border-radius: 0% 0% 20% 20%;
+        } 
+
+        .Toggling{
+            border: 0px;
+            background-color: #927070;
+            padding: 0%;
+            left:-100%;
+        }
+    
+        .home-text h1{
+            font-size: 4.22vh;
+        }
+        .about-img img{
+            display: flex;
+            flex-wrap: wrap;
+            width: 50%;
+            height: 50%;
+            margin-top: -15%;
+        }
+        .contact{
+            gap:0.5rem;
+        }
+        .about {
+            grid-template-columns: 1fr;
+        }
+    .about-img img{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 50%;
+    }
+
+        /*Changes in The Dark Mode Toggle */
+        label {
+            position: absolute;
+            width: 1.91vh;
+            height: 5.56vh;
+            left:2vh;
+            
+            top: 4.25vh;
+            border: 0.352vh solid;
+            border-radius: 3.515vh;
+        }
+
+        label:before{
+            position: absolute;
+            content: '';
+            width:1.0vh;
+            height: 1.0vh;
+            left: 0.175vh;
+            top: 0.175vh;
+            border-radius: 50%;
+            background: #f1ebeb;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        label.active:before{
+            left: 0.22vh;
+            top:3.3vh;
+            background: #121111;
+        }    
+        
+}
+
+@media (min-width:535px) and (max-width:810px)
+{
+            .one{
+                font-size: 1rem;
+            }
+            .two{
+                font-size: 1rem;
+            }
+            .home-text h1{
+                font-size:2rem;
+            }
+        .home-text h3{
+            font-size:1.5rem;
+        }
+        .home-text p{
+            font-size: 3.5vh;
+        }
+
+        label{
+            position: absolute;
+            width: 5.91vh;
+            height: 1.87vh;
+            right: 18.515vh;
+            top: 3.915vh;
+            border: 0.352vh solid;
+            border-radius: 3.515vh;
+        }
+        label:before{
+            position: absolute;
+            content: '';
+            width: 0.81vh;
+            height: 0.81vh;
+            left: 0.35vh;
+            top: 0.22vh;
+            border-radius: 50%;
+            background: #f1ebeb;
+            cursor: pointer;
+            transition: 0.4s;
+        }
+        label.active:before{
+            left: 4.22vh;
+            background: #121111;
+        }
+
+        .about{
+            grid-template-columns: repeat(2, 1fr);
+            }
+        .about-img img{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+        }
+
+        .contact{
+            gap:0.5rem;
+        }
+        .Profiles-content{
+            gap:1rem;
+        }
+
 }
