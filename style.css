@@ -552,6 +552,10 @@ svg{
 
 @media (min-width:320px) and (max-width:388px)
 {
+    
+    .home{
+        padding-left: 15%;
+    }
     .one{
         font-size:1rem;
     }
@@ -656,7 +660,11 @@ svg{
 
 @media (min-width:388px) and (max-width: 535px)
 {
-        .bx-menu{
+        
+    .home{
+        padding-left: 15%;
+    }
+    .bx-menu{
             visibility: visible;
             position: fixed;
             top: 0vh;
