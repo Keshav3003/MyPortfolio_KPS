@@ -447,8 +447,12 @@ svg{
     visibility: hidden;
 }
 
-@media (min-width:200px) and (max-width:320px)
+@media (min-width:0px) and (max-width:260px)
 {
+    
+    .home{
+        padding-left: 15%;
+    }
     .one{
         font-size:1rem;
     }
@@ -456,7 +460,7 @@ svg{
         font-size: 1rem;
     }
     .home-text h1{
-        font-size:2rem;
+        font-size:1rem;
     }
    .home-text h3{
     font-size:0.75rem;
@@ -550,7 +554,8 @@ svg{
    
 }
 
-@media (min-width:320px) and (max-width:388px)
+
+@media (min-width:260px) and (max-width:388px)
 {
     
     .home{
@@ -579,12 +584,110 @@ svg{
    .contact{
     gap:0.5rem;
 }
-   /*
-   :root{
-    --big-font: 2rem;
-    --h2-font: 1rem;
-    --p-font: 0.75rem;
-   } */
+    .bx-menu{
+        visibility: visible;
+        position: fixed;
+        top: 0vh;
+        right: 4vh;
+        display:block;
+        color: var(--text-color);
+        margin:20px;
+    }
+    
+    .Toggling.active{
+        left:0%;
+    }
+
+    .Toggling ul{
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background-color: var(--menu-color);
+        margin-top: 0%;
+        top:10%;
+        align-items: center;
+        border-bottom: 0.53vh solid #927070;
+        border-radius: 0% 0% 20% 20%;
+    } 
+
+    .Toggling{
+        border: 0px;
+        background-color: #927070;
+        padding: 0%;
+        left:-100%;
+    }
+   
+   
+    .about-img img{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        height: 50%;
+        margin-top: -15%;
+    }
+   
+    label {
+        position: absolute;
+        width: 1.91vh;
+        height: 5.56vh;
+        left:2vh;
+        
+        top: 4.25vh;
+        border: 0.352vh solid;
+        border-radius: 3.515vh;
+    }
+
+    label:before{
+        position: absolute;
+        content: '';
+        width:1.0vh;
+        height: 1.0vh;
+        left: 0.175vh;
+        top: 0.175vh;
+        border-radius: 50%;
+        background: #f1ebeb;
+        cursor: pointer;
+        transition: 0.4s;
+    }
+    label.active:before{
+        left: 0.22vh;
+        top:3.3vh;
+        background: #121111;
+    }    
+   
+}
+
+
+@media (min-width:260px) and (max-width:388px)
+{
+    
+    .home{
+        padding-left: 15%;
+    }
+    .one{
+        font-size:1rem;
+    }
+    .two{
+        font-size: 1rem;
+    }
+    .home-text h1{
+        font-size:2rem;
+    }
+   .home-text h3{
+    font-size:0.75rem;
+   }
+   .home-text p{
+    font-size: small;
+   }
+   .contact-icons i{
+    display: inline;
+    height: fit-content;
+    width: fit-content;
+   }
+   .contact{
+    gap:0.5rem;
+}
+
     .bx-menu{
         visibility: visible;
         position: fixed;
