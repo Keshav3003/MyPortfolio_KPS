@@ -193,8 +193,8 @@ section {
 }
 
 .about-img img {
-    max-width: 530px;
-    height: 470px;
+    max-width: 85%;
+    height: 50%;
     width: auto;
     border-radius: 25px;
 
@@ -533,6 +533,7 @@ svg{
         border: 0.352vh solid;
         border-radius: 3.515vh;
     }
+
 
     label:before{
         position: absolute;
