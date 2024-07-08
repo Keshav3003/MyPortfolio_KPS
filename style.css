@@ -172,7 +172,7 @@ section {
     display: inline-block;
     padding: 12px;
     background: var(--main-color);
-    border-radius: 5px;
+    border-radius: 25px;
     color: var(--text-color);
     font-size: 1rem;
     letter-spacing: 1px;
@@ -392,6 +392,9 @@ svg{
     transform: scale(1.1);
     cursor: pointer;
 }
+.bx-menu{
+    visibility: hidden;
+}
 
 /*Media Queries*/
 
@@ -425,6 +428,176 @@ svg{
     }
 }
 
+
+/* FOR DESKTOP MODE IN PHONES */
+@media only screen and (min-width: 960px) and (orientation: portrait) {
+
+    .home{
+        padding-left: 15%;
+    }
+    .one{
+        font-size: 3rem;
+    }
+    .two{
+        font-size: 3rem;
+    }
+    .home-text h1{
+        font-size:8rem;
+    }
+    
+   .home-text h3{
+    font-size:4rem;
+   }
+
+   .home-text p{
+    font-size: 2.5rem;
+   }
+
+   .btn{
+    font-size: 3rem;
+    padding: 15px;
+   }
+
+   label{
+    width: 2.91vh;
+    height: 1.87vh;
+    right: 2.515vh;
+    top: 1.2vh;
+   }
+
+   label:before{
+    position: absolute;
+    content: '';
+    width:1vh;
+    height:1vh;
+    left: 0.175vh;
+    top: 0.1vh;
+   }
+
+   label.active:before{
+    left: 1vh;
+    background: #121111;
+}
+
+    body {
+    font-size: 1rem; /* Adjust as needed */
+}
+
+header {
+    border-bottom: 2px solid #ccc;
+    border-radius: 10px;
+    border-radius: 0% 0% 10% 10%;
+}
+
+.navlist {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.navlist a {
+    font-size: 2rem;
+    margin: 0 1rem;
+}
+
+
+.about-img img{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 50%;
+    margin-top: 15%;
+}
+.contact{
+    gap:0.5rem;
+}
+.about {
+    grid-template-columns: 1fr;
+}
+.about-img img{
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+height: 50%;
+}
+
+.about-text p{
+    font-size:0.6vh;
+}
+.main-text{
+    margin-top: 5rem;
+}
+.Profiles-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%,auto));
+        align-items: center;
+        gap: 2rem;
+        margin-top: 5rem;
+    }
+
+    .s-icons i {
+        font-size: 5vh;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .contact-text h2 {
+        font-size: 8rem;
+        margin-bottom: 5%;
+        margin-top: 20%;
+    }
+
+    .contact-text h4 {
+        font-size: 2rem;
+    }
+
+    .contact-text p {
+        font-size:0.9rem;
+        margin-bottom: 20px;
+    }
+
+
+    .contact-icons {
+        display: flex;
+        justify-content: center;
+        gap: 2rem; /* Increase gap between icons */
+    }
+
+    .contact-icons i {
+        height: 60px;
+        width: 60px;
+        font-size: 3vh;
+        margin-right: 10px;
+        margin-bottom: 30px;
+
+    }
+
+    .contact-form textarea {
+        height: 200px;
+    }
+
+    .contact-form form input,form textarea {
+    font-size: 2vh;
+    margin-bottom: 50px;
+    }
+
+
+    .contact-form .submit {
+        width: 12vh;
+        font-size: 20px;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 15%;
+
+    }
+}
+
+
 @media (max-width:920px){
     .about{
         grid-template-columns: 1fr;
@@ -443,9 +616,8 @@ svg{
         grid-template-columns: 1fr;
     }
 }
-.bx-menu{
-    visibility: hidden;
-}
+
+
 
 @media (min-width:0px) and (max-width:260px)
 {
@@ -555,7 +727,7 @@ svg{
    
 }
 
-
+/* For Medium Phones */
 @media (min-width:260px) and (max-width:388px)
 {
     
@@ -563,20 +735,25 @@ svg{
         padding-left: 15%;
     }
     .one{
-        font-size:1rem;
+        font-size:1.5rem;
     }
     .two{
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
     .home-text h1{
-        font-size:2rem;
+        font-size:3.5rem;
     }
    .home-text h3{
-    font-size:0.75rem;
+    margin-top: 20px;
+    margin-bottom: 2vh;
+    font-size:1.75rem;
    }
    .home-text p{
-    font-size: small;
+    font-size: 1rem;
    }
+   .btn {
+    margin-bottom: 25%;
+}
    .contact-icons i{
     display: inline;
     height: fit-content;
@@ -585,118 +762,39 @@ svg{
    .contact{
     gap:0.5rem;
 }
-    .bx-menu{
-        visibility: visible;
-        position: fixed;
-        top: 0vh;
-        right: 4vh;
-        display:block;
-        color: var(--text-color);
-        margin:20px;
-    }
-    
-    .Toggling.active{
-        left:0%;
-    }
 
-    .Toggling ul{
-        flex-direction: column;
-        width: 100%;
-        height: 100%;
-        background-color: var(--menu-color);
-        margin-top: 0%;
-        top:10%;
+
+.about {
+    grid-template-columns: 1fr;
+}
+.about-img img{
+display: flex;
+flex-wrap: wrap;
+width: 50%;
+height: 50%;
+}
+
+.about-text p{
+    font-size:1.6vh;
+}
+
+.Profiles-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100%,auto));
         align-items: center;
-        border-bottom: 0.53vh solid #927070;
-        border-radius: 0% 0% 20% 20%;
-    } 
-
-    .Toggling{
-        border: 0px;
-        background-color: #927070;
-        padding: 0%;
-        left:-100%;
-    }
-   
-   
-    .about-img img{
-        display: flex;
-        flex-wrap: wrap;
-        width: 50%;
-        height: 50%;
-        margin-top: -15%;
-    }
-   
-    label {
-        position: absolute;
-        width: 1.91vh;
-        height: 5.56vh;
-        left:2vh;
-        
-        top: 4.25vh;
-        border: 0.352vh solid;
-        border-radius: 3.515vh;
+        gap: 2rem;
     }
 
-    label:before{
-        position: absolute;
-        content: '';
-        width:1.0vh;
-        height: 1.0vh;
-        left: 0.175vh;
-        top: 0.175vh;
-        border-radius: 50%;
-        background: #f1ebeb;
-        cursor: pointer;
-        transition: 0.4s;
-    }
-    label.active:before{
-        left: 0.22vh;
-        top:3.3vh;
-        background: #121111;
-    }    
-   
-}
-
-
-@media (min-width:260px) and (max-width:388px)
-{
-    
-    .home{
-        padding-left: 15%;
-    }
-    .one{
-        font-size:1rem;
-    }
-    .two{
-        font-size: 1rem;
-    }
-    .home-text h1{
-        font-size:2rem;
-    }
-   .home-text h3{
-    font-size:0.75rem;
-   }
-   .home-text p{
-    font-size: small;
-   }
-   .contact-icons i{
-    display: inline;
-    height: fit-content;
-    width: fit-content;
-   }
-   .contact{
-    gap:0.5rem;
-}
 
     .bx-menu{
         visibility: visible;
         position: fixed;
         top: 0vh;
-        right: 4vh;
+        right: 2.5vh;
         display:block;
         color: var(--text-color);
         margin:20px;
+        font-size: 3vh;
     }
     
     .Toggling.active{
@@ -776,6 +874,7 @@ svg{
             display:block;
             color: var(--text-color);
             margin:20px;
+            font-size: 3vh;
         }
         
         .Toggling.active{
@@ -918,3 +1017,4 @@ svg{
         }
 
 }
+
