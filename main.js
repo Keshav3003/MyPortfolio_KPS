@@ -17,3 +17,19 @@ const navLinks = document.getElementById('Toggling');
 toggleButton.addEventListener('click',()=>{
     navLinks.classList.toggle('active');
 })
+
+/*For Text Animation Done */
+  const words = ["Active Learner","Frontend Developer", "Backend Developer" , "DSA Enthusiast" ,"Competitive Coder"];
+  let wordIndex = 0;
+  const dynamicText = document.getElementById("dynamic-text");
+
+  function changeWord() {
+    dynamicText.style.opacity = 0; // Start fade-out
+    setTimeout(() => {
+      wordIndex = (wordIndex + 1) % words.length;
+      dynamicText.textContent = words[wordIndex];
+      dynamicText.style.opacity = 1; // Start fade-in
+    }, 1000); //CSS transition duration
+  }
+
+  setInterval(changeWord, 2500);
