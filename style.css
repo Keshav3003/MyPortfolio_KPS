@@ -116,7 +116,7 @@ section {
 }
 
 .white-text {
-    color: white;
+     color: var(--text-color);
   }
   
   #dynamic-text {
